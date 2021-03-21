@@ -1,6 +1,6 @@
 import * as React from "react";
 import LogoImage from "./logo.png";
-import './LogoStyle.scss';
+import './LogoStyles.scss';
 
 
 class Logo extends React.Component {
