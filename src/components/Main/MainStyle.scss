@@ -1,0 +1,15 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7em
+;
+  &-btn{
+    height: 40vh;
+    border-radius: 1em;
+    a {
+      color: black;
+      font-weight: bold;
+      font-size: large;
+    }
+  }
+}
