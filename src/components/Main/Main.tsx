@@ -1,16 +1,23 @@
 import * as React from "react";
 import "./MainStyles.scss"
+import {withRouter, RouteComponentProps} from "react-router-dom";
 
-class Main extends React.Component {
+
+interface IMainProps extends RouteComponentProps {
+}
 
 
+class Main extends React.Component<IMainProps, {}> {
+
+    redirectHome = () => {
+        const history = this.props.history
+        history.push ('/expressscan')
+    }
     render() {
         return (
             <div className="main">
-                <button className="main-btn waves-effect waves-light btn lime lighten-4">
-                    <a href={""}>
+                <button onClick={this.redirectHome} className="main-btn waves-effect waves-light btn lime lighten-4">
                         Отсканируйте штрихкод, чтобы узнать цену товара
-                    </a>
                 </button>
                 <button className=" main-btn waves-effect waves-light btn lime lighten-4">
                     <a href={""}>
@@ -22,5 +29,5 @@ class Main extends React.Component {
     }
 }
 
-export default Main
+export default withRouter(Main)
 

@@ -1,19 +1,22 @@
 import React from 'react';
-import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
-import Logo from "./components/Logo/Logo";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
+
+import FirstPage from './components/FirstPage'
+import ExpressScan from "./components/ExpressScan/ExpressScan";
+
 
 
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
-                <Logo/>
-                <Main/>
-                <Footer/>
-            </div>
-
+            <BrowserRouter>
+                <div className="container">
+                    <Switch>
+                        <Route component={FirstPage} path="/" exact/>
+                        <Route component={ExpressScan} path="/expressscan"/>
+                    </Switch>
+                </div>
+            </BrowserRouter>
         );
     }
 }

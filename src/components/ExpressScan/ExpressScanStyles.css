@@ -1,0 +1,33 @@
+.price {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 4em;
+}
+.price-style {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 3em;
+}
+.price-btn {
+  color: black;
+  height: 100%;
+}
+
+.grid-style {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7em;
+  margin: 5em auto;
+}
+.grid-style input {
+  border-bottom: 1px solid #f0f4c3;
+  box-shadow: 0 1px 0 0 #000;
+  margin-bottom: 0;
+}
+.grid-style :not([type]):focus:not([readonly]) {
+  border-bottom: 1px solid #33691e;
+  -webkit-box-shadow: 0 1px 0 0 black;
+  box-shadow: 0 1px 0 0 black;
+}
+
+/*# sourceMappingURL=ExpressScanStyles.css.map */
