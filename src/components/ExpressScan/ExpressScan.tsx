@@ -1,6 +1,7 @@
 import React from "react";
 import "./ExpressScanStyles.scss"
 import Logo from "../Logo/Logo";
+import Footer2 from "../Footer2/Footer2";
 
 class ExpressScan extends React.Component<any, any>{
 
@@ -14,6 +15,7 @@ class ExpressScan extends React.Component<any, any>{
                         <button className="price-btn waves-effect waves-light btn lime lighten-4 ">Узнать цену</button>
                     </div>
                 <div className='price-style'>здесь будет цена товара</div>
+                <Footer2/>
             </>
         )
     }

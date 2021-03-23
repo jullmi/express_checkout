@@ -9,14 +9,14 @@ interface IMainProps extends RouteComponentProps {
 
 class Main extends React.Component<IMainProps, {}> {
 
-    redirectHome = () => {
+    redirectExpressScan = () => {
         const history = this.props.history
         history.push ('/expressscan')
     }
     render() {
         return (
             <div className="main">
-                <button onClick={this.redirectHome} className="main-btn waves-effect waves-light btn lime lighten-4">
+                <button onClick={this.redirectExpressScan} className="main-btn waves-effect waves-light btn lime lighten-4">
                         Отсканируйте штрихкод, чтобы узнать цену товара
                 </button>
                 <button className=" main-btn waves-effect waves-light btn lime lighten-4">
