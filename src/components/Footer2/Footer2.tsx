@@ -17,7 +17,7 @@ class Footer2 extends React.Component <IFooter2props, {}> {
 
     render() {
         return (
-            <div className="footer">
+            <div className="footer2">
                 <button className="waves-effect waves-light btn-large light-green darken-4">
                     Помощь
                 </button>

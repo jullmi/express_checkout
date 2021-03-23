@@ -3,6 +3,7 @@ import "./MainStyles.scss"
 import {withRouter, RouteComponentProps} from "react-router-dom";
 
 
+
 interface IMainProps extends RouteComponentProps {
 }
 
@@ -13,16 +14,21 @@ class Main extends React.Component<IMainProps, {}> {
         const history = this.props.history
         history.push ('/expressscan')
     }
+
+    redirectShopPage = () => {
+        const history = this.props.history
+        history.push('/shoppage')
+    }
+
+
     render() {
         return (
             <div className="main">
                 <button onClick={this.redirectExpressScan} className="main-btn waves-effect waves-light btn lime lighten-4">
                         Отсканируйте штрихкод, чтобы узнать цену товара
                 </button>
-                <button className=" main-btn waves-effect waves-light btn lime lighten-4">
-                    <a href={""}>
+                <button onClick={this.redirectShopPage} className=" main-btn waves-effect waves-light btn lime lighten-4">
                         Нажмите, чтобы начать покупки
-                    </a>
                 </button>
             </div>
         );

@@ -1,0 +1,24 @@
+.shop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em 15em;
+}
+.shop-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+.shop-btn-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 20vh;
+}
+.shop h5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=ShopPage.css.map */

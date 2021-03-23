@@ -1,10 +1,10 @@
-.footer2 {
+.footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3em;
   margin: 7em auto 2em;
 }
-.footer2 .select {
+.footer .select {
   margin: 0 auto;
   color: white;
   background: #33691e;
@@ -14,4 +14,4 @@
   text-align-last: center;
 }
 
-/*# sourceMappingURL=FooterStyles2.css.map */
+/*# sourceMappingURL=FooterStyles3.css.map */
