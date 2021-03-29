@@ -1,22 +1,11 @@
 import React from "react";
 import "./FooterStyles.scss"
-import Modal from "../Modal/Modal";
-import {showModal} from "../../actions/ActionCreateModal";
-import {IModalProps} from "../../types";
+
 
 
 class Footer extends React.Component<any, any>{
-    constructor(props:IModalProps) {
-        super(props);
 
-        this.state = {
-            active: true,
-        }
-    }
 
-    setActive = () => {
-        return active = false
-    }
 
     render() {
         return (
@@ -32,10 +21,10 @@ class Footer extends React.Component<any, any>{
                         <option value="ru" className="option">Русский </option>
                         <option value="en">English</option>
                     </select>
-                <Modal/>
             </div>
         );
     }
 }
 
 export default Footer
+
