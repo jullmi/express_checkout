@@ -1,12 +1,10 @@
 import React from "react";
 import "./FooterStyles.scss"
 import Modal from "../Modal/Modal";
-import {RootState} from "../../store";
-import {connect} from "react-redux";
 
 
-class Footer extends React.Component<any, any>{
 
+class Footer extends React.Component<{}, {}>{
 
     showModal = (event: React.MouseEvent<HTMLButtonElement>) => {
 
@@ -15,8 +13,6 @@ class Footer extends React.Component<any, any>{
 
 
     render() {
-        const {modalActive} = this.props
-        console.log(modalActive)
         return (
             <>
             <div className="footer">
@@ -31,16 +27,15 @@ class Footer extends React.Component<any, any>{
                         <option value="en">English</option>
                     </select>
             </div>
-            <Modal/>
+            <Modal />
             </>
         );
     }
 }
 
-const mapStateToProps = (store: RootState) => {
-    console.log (store.modal)
-    return store.modal
-};
-export default connect(mapStateToProps)(Footer)
+
+
+
+export default Footer
 
 

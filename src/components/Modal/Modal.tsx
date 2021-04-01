@@ -1,17 +1,18 @@
 import React from "react";
 import "./ModalStyles.scss"
 import logoHelp from "./help.png"
-import {RootState} from "../../store";
+import {AppDispatch, RootState} from "../../store";
 import {connect} from "react-redux";
-
+import {createModalAction} from "../../store/action-creators/ActionCreateModal";
 
 
 class Modal extends React.Component<{}, {}>{
 
 
 
-
     render() {
+        const modalActive = this.props
+        console.log(modalActive)
         return (
             <div className="modal">
                 <img src={logoHelp} alt={''}/>
@@ -27,8 +28,13 @@ class Modal extends React.Component<{}, {}>{
 }
 
 
-// const mapStateToProps = (store: RootState) => {
-//     console.log (store.modal.modalActive)
-//     return store.modal
-// };
-export  default Modal
+const mapStateToProps = (store: RootState) => {
+    return store.modal
+};
+
+const mapDispatchToProps = (dispatch: AppDispatch) => {
+    return dispatch(createModalAction('work'))
+}
+
+
+export  default connect(mapStateToProps, mapDispatchToProps)(Modal)
