@@ -1,24 +1,27 @@
 import React from "react";
 import "./ModalStyles.scss"
 import logoHelp from "./help.png"
-import {AppDispatch, RootState} from "../../store";
-import {connect} from "react-redux";
-import {createModalAction} from "../../store/action-creators/ActionCreateModal";
 
 
-class Modal extends React.Component<{}, {}>{
+type State = {
 
+}
 
+type Props = {
+    modalActive?: boolean,
+    error?: null | string,
+}
+
+class Modal extends React.Component<Props, State>{
 
     render() {
-        const modalActive = this.props
-        console.log(modalActive)
         return (
-            <div className="modal">
-                <img src={logoHelp} alt={''}/>
+            <div className={true ? 'modal-active' : 'modal'}>
                 <div className="modal-content">
-                    Если Вам нужна помощь консультанта, нажмите на кнопку "Вызвать консультанта",
-                    для отмены операции нажмите "Отмена"
+                    <img src={logoHelp} alt={''}/>
+                        <p>Если Вам нужна помощь консультанта, нажмите на кнопку "Вызвать консультанта",
+                            для отмены операции нажмите "Отмена"
+                        </p>
                 </div>
                     <button>Вызвать консультанта</button>
                     <button>Отмена</button>
@@ -28,13 +31,4 @@ class Modal extends React.Component<{}, {}>{
 }
 
 
-const mapStateToProps = (store: RootState) => {
-    return store.modal
-};
-
-const mapDispatchToProps = (dispatch: AppDispatch) => {
-    return dispatch(createModalAction('work'))
-}
-
-
-export  default connect(mapStateToProps, mapDispatchToProps)(Modal)
+export  default Modal

@@ -2,8 +2,7 @@ import {IModalActionTypes, IModalState, modalAction} from "../../types/modal";
 
 
 export const initialState: IModalState = {
-    modalActive: true,
-    error: null,
+    modalActive: false,
 };
 
 
@@ -12,23 +11,22 @@ export const modalReducer = (state = initialState, action: modalAction): IModalS
     switch (action.type) {
         case IModalActionTypes.SHOW_MODAL:
             return {
+                ...state,
                 modalActive: true,
-                error: null
             };
         case IModalActionTypes.CLOSE_MODAL:
             return {
+                ...state,
                 modalActive: false,
-                error: null
             };
-        case IModalActionTypes.ERROR_MODAL:
-            return {
-                modalActive: false,
-                error: action.payload
-            };
+
         default:
             return state
     }
 }
+
+
+
 
 
 

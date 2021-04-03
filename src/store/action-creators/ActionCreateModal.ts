@@ -1,11 +1,16 @@
 import {IModalActionTypes} from "../../types/modal";
 
-export const createModalAction = (payload: string) => {
+
+export const createModalAction = () => {
     return {
-        type: IModalActionTypes.SHOW_MODAL ,
-        payload,
+        type: IModalActionTypes.SHOW_MODAL,
     }
 };
 
+export const closeModalAction = () => {
+    return {
+        type: IModalActionTypes.CLOSE_MODAL,
+    }
+};
 
 
