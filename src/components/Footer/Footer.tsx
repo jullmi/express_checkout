@@ -10,12 +10,14 @@ import {connect} from "react-redux";
 class Footer extends React.Component<any,any> {
 
 
+    showModal = () => this.props.createModalAction()
+
     render() {
 
         return (
             <>
             <div className="footer">
-                <button onClick={() => this.props.createModalAction()} className="waves-effect waves-light btn-large light-green darken-4">
+                <button onClick={this.showModal} className="waves-effect waves-light btn-large light-green darken-4">
                     Помощь
                 </button>
                 <button className="waves-effect waves-light btn-large light-green darken-4">
