@@ -2,12 +2,12 @@ import {IModalActionTypes, IModalState, modalAction} from "../../types/modal";
 
 
 export const initialState: IModalState = {
-    modalActive: false,
+    modalActive: true,
 };
 
 
 
-export const modalReducer = (state = initialState, action: modalAction): IModalState  => {
+export  const modalReducer = (state = initialState, action: modalAction): IModalState  => {
     switch (action.type) {
         case IModalActionTypes.SHOW_MODAL:
             return {

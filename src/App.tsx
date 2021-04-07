@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import FirstPage from './components/Home'
 import ExpressScan from "./components/ExpressScan/ExpressScan";
 import ShopPage from "./components/ShopPage/ShopPage";
+import Modal from "./components/Modal/Modal";
 
 
 

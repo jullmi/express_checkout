@@ -1,13 +1,25 @@
 import React from "react";
 import "./FooterStyles.scss"
-import Modal from "../Modal/Modal";
 import {RootState} from "../../store/store";
 import {createModalAction, closeModalAction} from "../../store/action-creators/ActionCreateModal";
 import {connect} from "react-redux";
 
 
 
+
+interface Props {
+
+
+}
+
+interface State {
+
+}
+
+
 class Footer extends React.Component<any,any> {
+
+
 
 
     render() {
@@ -15,6 +27,10 @@ class Footer extends React.Component<any,any> {
         return (
             <>
             <div className="footer">
+
+
+
+
                 <button onClick={() => this.props.createModalAction()} className="waves-effect waves-light btn-large light-green darken-4">
                     Помощь
                 </button>
@@ -26,7 +42,8 @@ class Footer extends React.Component<any,any> {
                         <option value="en">English</option>
                     </select>
             </div>
-            <Modal/>
+
+
             </>
         );
     }

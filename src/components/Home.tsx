@@ -2,6 +2,7 @@ import React from 'react';
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import Logo from "./Logo/Logo";
+import Modal from "./Modal/Modal";
 
 
 
@@ -12,6 +13,7 @@ class App extends React.Component <{}, {}> {
                 <Logo/>
                 <Main/>
                 <Footer/>
+                <Modal/>
             </>
 
         );
