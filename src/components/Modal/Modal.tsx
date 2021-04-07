@@ -18,7 +18,6 @@ type ModalProps = {
 class Modal extends React.Component<any, State>{
 
     render() {
-<<<<<<< HEAD
         const a = this.props
         console.log(a)
 
@@ -30,11 +29,6 @@ class Modal extends React.Component<any, State>{
 
         return (
             <div className={modal.modalActive  ? 'modal-active' : 'modal'}>
-=======
-
-        return (
-            <div className={this.props.modalActive ? 'modal-active' : 'modal'}>
->>>>>>> 3e003b1d5a1e112141d69eb10527bfba005647f7
                 <div className="modal-content">
                     <img src={logoHelp} alt={''}/>
                         <p>Если Вам нужна помощь консультанта, нажмите на кнопку
